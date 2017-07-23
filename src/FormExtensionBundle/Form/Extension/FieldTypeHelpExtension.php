@@ -34,9 +34,9 @@ class FieldTypeHelpExtension extends AbstractTypeExtension
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             self::FIELD_HELP => null,
-        ));
+        ]);
     }
     /**
      * @return string

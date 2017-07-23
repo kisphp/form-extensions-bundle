@@ -13,7 +13,7 @@ class TwigFormPass implements CompilerPassInterface
 
     public function process(ContainerBuilder $container)
     {
-        if ( ! $container->hasParameter(self::TWIG_FORM_RESOURCES)) {
+        if (!$container->hasParameter(self::TWIG_FORM_RESOURCES)) {
             return;
         }
 
