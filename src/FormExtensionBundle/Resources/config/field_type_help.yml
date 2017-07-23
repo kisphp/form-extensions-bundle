@@ -1,0 +1,5 @@
+services:
+    kisphp_form_extensions.form.extension.help:
+        class: Kisphp\FormExtensionBundle\Form\Extension\FieldTypeHelpExtension
+        tags:
+            - { name: form.type_extension, alias: form }

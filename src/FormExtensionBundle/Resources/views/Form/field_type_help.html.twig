@@ -1,0 +1,18 @@
+{% block field_help %}
+    {% if help | default %}
+        <div class="form-info-small">{{ help | trans }}</div>
+    {% endif %}
+{% endblock %}
+
+{% block form_row %}
+    {% spaceless %}
+        <div class="form-group{% if (not compound or force_error|default(false)) and not valid %} has-error{% endif %}">
+            {{- form_label(form) -}}
+            <div class="{{ block('form_group_class') }}">
+                {{- form_widget(form) -}}
+                {{- form_errors(form) -}}
+                {{ block('field_help') }}
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}
