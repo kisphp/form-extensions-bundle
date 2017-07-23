@@ -34,7 +34,7 @@ twig:
 Add help option to form element:
 
 ```php
-->add('desription', TextareaType::class, [
+->add('description', TextareaType::class, [
     // ...
     'help' => 'This is my help message',
 ])
