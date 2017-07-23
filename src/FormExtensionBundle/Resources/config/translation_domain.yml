@@ -1,5 +1,0 @@
-services:
-    simple_things_form_extra.form.extension.translation_domain:
-        class: Kisphp\FormExtensionBundle\Form\Extension\TranslationDomainExtension
-        tags:
-            - { name: form.type_extension, alias: field }

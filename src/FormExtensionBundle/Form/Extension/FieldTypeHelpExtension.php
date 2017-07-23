@@ -10,13 +10,15 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class FieldTypeHelpExtension extends AbstractTypeExtension
 {
+    const FIELD_HELP = 'help';
+
     /**
      * @param FormBuilderInterface $builder
      * @param array                $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->setAttribute('help', $options['help']);
+        $builder->setAttribute(self::FIELD_HELP, $options[self::FIELD_HELP]);
     }
     /**
      * @param FormView      $view
@@ -25,7 +27,7 @@ class FieldTypeHelpExtension extends AbstractTypeExtension
      */
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
-        $view->vars['help'] = $options['help'];
+        $view->vars[self::FIELD_HELP] = $options[self::FIELD_HELP];
     }
     /**
      * @param OptionsResolverInterface $resolver
@@ -33,7 +35,7 @@ class FieldTypeHelpExtension extends AbstractTypeExtension
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'help' => null,
+            self::FIELD_HELP => null,
         ));
     }
     /**

@@ -7,15 +7,19 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class TwigFormPass implements CompilerPassInterface
 {
+    const TWIG_FORM_RESOURCES = 'twig.form.resources';
+
+    const FIELD_HELP_EXTENSION_TEMPLATE = '@FormExtension/Form/field_type_help.html.twig';
+
     public function process(ContainerBuilder $container)
     {
-        if ( ! $container->hasParameter('twig.form.resources')) {
+        if ( ! $container->hasParameter(self::TWIG_FORM_RESOURCES)) {
             return;
         }
 
-        $container->setParameter('twig.form.resources', array_merge(
-            ['@FormExtension/Form/field_type_help.html.twig'],
-            $container->getParameter('twig.form.resources')
+        $container->setParameter(self::TWIG_FORM_RESOURCES, array_merge(
+            [self::FIELD_HELP_EXTENSION_TEMPLATE],
+            $container->getParameter(self::TWIG_FORM_RESOURCES)
         ));
     }
 }
