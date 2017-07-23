@@ -1,0 +1,8 @@
+parameters:
+    simple_things_form_extra.form.extension.help.class: SimpleThings\FormExtraBundle\Form\Extension\FieldTypeHelpExtension
+
+services:
+    simple_things_form_extra.form.extension.help:
+        class: %simple_things_form_extra.form.extension.help.class%
+        tags:
+            - { name: form.type_extension, alias: form }
