@@ -21,8 +21,6 @@ public function registerBundles()
 }
 ```
 
-## Usage
-
 Register new template in `app/config/config.yml`:
 ```yaml
 twig:
@@ -31,3 +29,15 @@ twig:
         - "@FormExtension/Form/field_type_help.html.twig"
 ```
 
+## Usage
+
+Add help option to form element:
+
+```php
+->add('desription', TextareaType::class, [
+    // ...
+    'help' => 'This is my help message',
+])
+```
+
+> You also may use translation for the message
