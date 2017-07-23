@@ -1,6 +1,6 @@
 # Kisphp Calendar Bundle
 
-[![Build Status](https://travis-ci.org/kisphp/calendar-bundle.svg?branch=master)](https://travis-ci.org/kisphp/calendar-bundle)
+[![Build Status](https://travis-ci.org/kisphp/form-extensions-bundle.svg?branch=master)](https://travis-ci.org/kisphp/form-extensions-bundle)
 
 ## Installation
 
