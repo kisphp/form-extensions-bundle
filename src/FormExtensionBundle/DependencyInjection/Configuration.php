@@ -9,12 +9,16 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $builder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder();
+        $treeBuilder->root('kisphp_form_extensions');
 
-        return $builder->root('kisphp_form_extensions')
-            ->children()
-                ->booleanNode('help_extension')->defaultFalse()->end()
-            ->end()
-        ->end();
+//        $rootNode
+//            ->children()
+//                ->booleanNode('translation_domain_forward_compat')->defaultTrue()->end()
+//                ->booleanNode('help_extension')->defaultTrue()->end()
+//            ->end()
+//        ->end();
+
+        return $treeBuilder;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Kisphp\FormExtensionBundle;
 
-use ComunicaBundle\DependencyInjection\Compiler\TwigFormPass;
+use Kisphp\FormExtensionBundle\DependencyInjection\Compiler\TwigFormPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

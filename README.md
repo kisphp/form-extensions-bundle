@@ -5,26 +5,29 @@
 ## Installation
 
 ```bash
-composer require kisphp/calendar-bundle
+composer require kisphp/form-extensions-bundle
 ```
 
-## Usage
+To enable the bundle register it  inside your kernel class `app/AppKernel.php`
 
 ```php
 <?php
 
-use Kisphp\CalendarBundle\Translations\LangRo;
-use Kisphp\CalendarBundle\Services\Calendar;
-
-$translation = new LangRo();
-$calendar = new Calendar($translation);
-$calendar->generateData($year, $month, date('d'));
-
-// get generated days as array
-$calendar->getDays();
+public function registerBundles()
+{
+    // ...
+    new \Kisphp\FormExtensionBundle\FormExtensionBundle(),
+    // ...
+}
 ```
 
-Add css to your page (Symfony)
-```html
-<link href="bundles/calendar/css/calendar.css" rel="stylesheet" /> 
+## Usage
+
+Register new template in `app/config/config.yml`:
+```yaml
+twig:
+    form_themes:
+        - "bootstrap_3_horizontal_layout.html.twig"
+        - "@FormExtension/Form/field_type_help.html.twig"
 ```
+
