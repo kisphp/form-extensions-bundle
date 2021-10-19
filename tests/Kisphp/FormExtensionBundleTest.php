@@ -18,7 +18,7 @@ class FormExtensionBundleTest extends TestCase
 
         $passes = $container->getCompilerPassConfig()->getBeforeOptimizationPasses();
 
-        self::assertEquals(1, count($passes));
-        self::assertInstanceOf(TwigFormPass::class, $passes[0]);
+        self::assertEquals(5, count($passes));
+        self::assertInstanceOf(TwigFormPass::class, $passes[3]);
     }
 }
