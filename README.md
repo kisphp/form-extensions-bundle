@@ -2,8 +2,6 @@
 
 ![example workflow](https://github.com/kisphp//form-extensions-bundle/actions/workflows/testing.yml/badge.svg)
 
-[![Build Status](https://travis-ci.org/kisphp/form-extensions-bundle.svg?branch=master)](https://travis-ci.org/kisphp/form-extensions-bundle)
-
 ## Installation
 
 ```bash

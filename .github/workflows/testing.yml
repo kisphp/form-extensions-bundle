@@ -20,3 +20,6 @@ jobs:
 
       - name: run tests
         run: "vendor/bin/phpunit"
+
+      - name: code fixer
+        run: "vendor/bin/php-cs-fixer fix -v --dry-run"
