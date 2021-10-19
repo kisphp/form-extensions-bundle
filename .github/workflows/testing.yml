@@ -18,6 +18,9 @@ jobs:
         with:
           php_version: 7.4
 
+      - name: show php version
+        run: "php -v"
+
       - name: run tests
         run: "vendor/bin/phpunit"
 
@@ -32,6 +35,9 @@ jobs:
         uses: php-actions/composer@master
         with:
           php_version: 8.0
+
+      - name: show php version
+        run: "php -v"
 
       - name: run tests
         run: "vendor/bin/phpunit"
