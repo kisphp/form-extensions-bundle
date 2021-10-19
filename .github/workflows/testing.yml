@@ -2,6 +2,9 @@ name: Unit tests
 
 on: [push]
 
+env:
+  XDEBUG_MODE: coverage
+
 jobs:
   phpunit:
     name: Run phpunit tests
@@ -16,4 +19,4 @@ jobs:
           php_version: 7.4
 
       - name: run tests
-        run: "phpunit"
+        run: "vendor/bin/phpunit"
