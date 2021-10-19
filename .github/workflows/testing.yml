@@ -7,7 +7,7 @@ env:
 
 jobs:
   phpunit-php-7:
-    name: Run phpunit tests
+    name: Run phpunit tests on php 7.4
     runs-on: ubuntu-20.04
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         run: "vendor/bin/phpunit"
 
   phpunit-php-8:
-    name: Run phpunit tests
+    name: Run phpunit tests on php 8
     runs-on: ubuntu-20.04
 
     steps:
