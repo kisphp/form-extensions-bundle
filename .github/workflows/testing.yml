@@ -1,16 +1,17 @@
 name: Unit tests
 
+on: [push]
+
 jobs:
   phpunit:
     name: Run phpunit tests
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-          red: ${{ github.event.inputs.tag }}
+      - uses: actions/checkout@v2
 
       - name: install dependencies
+        uses: php-actions/composer
         run: "composer install -noa"
+        with:
+          php_version: 7.4
