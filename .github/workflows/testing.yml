@@ -24,7 +24,7 @@ jobs:
           php-version: "7.4"
           extensions: imagick, xdebug
 
-      - name: show php version
+      - name: php version
         run: "php -v"
 
       - name: run tests
@@ -42,7 +42,7 @@ jobs:
         with:
           php_version: 8.0
 
-      - name: show php version
+      - name: php version
         run: "php -v"
 
       - name: run tests
