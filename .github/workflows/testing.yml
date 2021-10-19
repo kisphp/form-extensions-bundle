@@ -18,6 +18,12 @@ jobs:
         with:
           php_version: 7.4
 
+      - name: Setup PHP with PECL extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          extensions: imagick, xdebug
+
       - name: show php version
         run: "php -v"
 
