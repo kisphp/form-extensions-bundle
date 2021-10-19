@@ -6,7 +6,7 @@ env:
   XDEBUG_MODE: coverage
 
 jobs:
-  phpunit:
+  phpunit-php-7:
     name: Run phpunit tests
     runs-on: ubuntu-20.04
 
@@ -17,6 +17,21 @@ jobs:
         uses: php-actions/composer@master
         with:
           php_version: 7.4
+
+      - name: run tests
+        run: "vendor/bin/phpunit"
+
+  phpunit-php-8:
+    name: Run phpunit tests
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install dependencies
+        uses: php-actions/composer@master
+        with:
+          php_version: 8.0
 
       - name: run tests
         run: "vendor/bin/phpunit"
