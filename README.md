@@ -1,6 +1,6 @@
 # Kisphp Calendar Bundle
 
-[![Build Status](https://travis-ci.org/kisphp/form-extensions-bundle.svg?branch=master)](https://travis-ci.org/kisphp/form-extensions-bundle)
+![example workflow](https://github.com/kisphp//form-extensions-bundle/actions/workflows/testing.yml/badge.svg)
 
 ## Installation
 
